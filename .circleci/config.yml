@@ -4,6 +4,7 @@ jobs:
   build:
     docker:
       - image: cimg/ruby:3.3.4
+    parallelism: 2
     steps:
       - checkout
       - run: gem install bundler:2.5.17
