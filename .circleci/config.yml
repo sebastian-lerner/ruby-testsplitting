@@ -4,7 +4,7 @@ jobs:
   build:
     docker:
       - image: cimg/ruby:3.3.4
-    parallelism: 2
+    parallelism: 3
     steps:
       - checkout
       - run: gem install bundler:2.5.17
@@ -12,6 +12,6 @@ jobs:
       - run:
           name: the tests
           command: |
-            circleci tests glob "spec/**/*_spec.rb" | circleci tests run --command="xargs bundle exec rspec --format progress --format RspecJunitFormatter -o ~/rspec/rspec.xml" --verbose --split-by=timings --timings-type=testname
+            circleci tests glob "spec/**/*_spec.rb" | circleci tests run --command="xargs bundle exec rspec --format progress --format RspecJunitFormatter -o ~/rspec/rspec.xml" --verbose --split-by=timings --timings-type=name
       - store_test_results:
           path: ~/rspec
