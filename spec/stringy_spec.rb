@@ -2,7 +2,7 @@ require './src/stringy'
 
 describe StringAnalyzer do
   context "With valid input" do
-    it "should detect when a string contains vowels" do
+    it "llll" do
       sa = StringAnalyzer.new
       test_string = 'uuu'
       expect(sa.has_vowels? test_string).to be true
