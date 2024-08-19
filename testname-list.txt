@@ -1,0 +1,6 @@
+StringAnalyzer With valid input should detect when a string contains vowels
+StringAnalyzer With valid input should detect when a string doesn't contain vowels
+StringAnalyzer With slow input should be slow
+StringAnalyzer With slow input should be slow 2
+HelloSlow When testing the HelloSlow class should say 'Hello Slow' when we call the say_hello method
+HelloWorld When testing the HelloWorld class should say 'Hello World' when we call the say_hello method
