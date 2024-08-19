@@ -12,7 +12,7 @@ jobs:
       - run:
           name: the tests
           command: |
-             TESTFILES=$(find ./spec -name '*_spec.rb' | circleci tests split --split-by=timings --timings-type=testname)
+             TESTFILES=$(find spec -name '*_spec.rb' | circleci tests split --split-by=timings --timings-type=testname)
              bundle exec rspec --format progress --format RspecJunitFormatter -o ~/rspec/rspec.xml $TESTFILES
              
    #         circleci tests glob "./spec/**/*_spec.rb" | circleci tests run --command="xargs bundle exec rspec --format progress --format RspecJunitFormatter -o ~/rspec/rspec.xml" --verbose --split-by=timings --timings-type=name
