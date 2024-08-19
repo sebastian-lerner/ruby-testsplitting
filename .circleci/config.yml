@@ -12,7 +12,10 @@ jobs:
       - run:
           name: the tests
           command: |
-            circleci tests glob "./spec/**/*_spec.rb" | circleci tests run --command="xargs bundle exec rspec --format progress --format RspecJunitFormatter -o ~/rspec/rspec.xml" --verbose --split-by=timings --timings-type=name
+             TESTFILES = $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings --timings-type=name)
+             bundle exec rspec --format progress --format RspecJunitFormatter -o ~/rspec/rspec.xml $TESTFILES
+             
+#            circleci tests glob "./spec/**/*_spec.rb" | circleci tests run --command="xargs bundle exec rspec --format progress --format RspecJunitFormatter -o ~/rspec/rspec.xml" --verbose --split-by=timings --timings-type=name
       - store_test_results:
           path: ~/rspec
       - store_artifacts: 
