@@ -12,7 +12,6 @@ jobs:
       - run:
           name: the tests
           command: |
-  #          TESTFILES=$(rspec --format documentation $(find ./spec -name '*_spec.rb') | circleci tests split --split-by=timings --timings-type=testname)
              TESTFILES=$(cat ./testname-list | circleci tests split --split-by=timings --timings-type=testname)
              bundle exec rspec --format progress --format RspecJunitFormatter -o ~/rspec/rspec.xml $TESTFILES
              
