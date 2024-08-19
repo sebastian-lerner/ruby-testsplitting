@@ -16,4 +16,4 @@ jobs:
       - store_test_results:
           path: ~/rspec
       - store_artifacts: 
-          path: ~/rspec
+          path: ~/rspec 
