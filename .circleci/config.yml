@@ -8,5 +8,6 @@ jobs:
     steps:
       - echo "hello world"
 workflows:
-  jobs:
-    - build
+  my-workflow:
+    jobs:
+      - build
