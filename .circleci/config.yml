@@ -1,13 +1,14 @@
-version: 2
+version: 2.1
 
 jobs:
-  build:
+  test-fork:
     docker:
       - image: cimg/ruby:current
     parallelism: 2
     steps:
       - echo "hello world"
+
 workflows:
   my-workflow:
     jobs:
-      - build
+      - test-fork
