@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   test-fork:
     docker:
-      - image: cimg/ruby:current
+      - image: cimg/ruby:3.3.5
     parallelism: 2
     steps:
       - run: echo "hello world"
