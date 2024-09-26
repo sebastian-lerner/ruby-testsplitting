@@ -7,3 +7,6 @@ jobs:
     parallelism: 2
     steps:
       - echo "hello world"
+workflows:
+  jobs:
+    - build
