@@ -10,6 +10,6 @@ jobs:
       - run: echo $CIRCLE_REPOSITORY_URL
 
 workflows: 
-  my-workflow:
+  test-ruby:
     jobs:
       - test-fork
