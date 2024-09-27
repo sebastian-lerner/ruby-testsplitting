@@ -7,6 +7,7 @@ jobs:
     parallelism: 2
     steps:
       - run: echo "hello world"
+      - run: echo $CIRCLE_REPOSITORY_URL
 
 workflows:
   my-workflow:
