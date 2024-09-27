@@ -9,7 +9,7 @@ jobs:
       - run: echo "hello world"
       - run: echo $CIRCLE_REPOSITORY_URL
 
-workflows:
+workflows: 
   my-workflow:
     jobs:
       - test-fork
