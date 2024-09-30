@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  test-fork:
+  test-cron:
     docker:
       - image: cimg/ruby:3.3.5
     parallelism: 2
@@ -9,8 +9,16 @@ jobs:
       - run: echo "hello world"
       - run: echo $CIRCLE_REPOSITORY_URL
       - run: echo << pipeline.project.git_url >>
- 
-workflows: 
+      - run: echo "i'm a cron test"
+
+workflows:  
   test-ruby:
+    triggers:
+      - schedule:
+          cron: '40 * * * *'
+          filters:
+            branches:
+              only:
+                - branch-show-up
     jobs:
-      - test-fork
+      - test-cron
