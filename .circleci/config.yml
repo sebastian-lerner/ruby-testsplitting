@@ -11,7 +11,7 @@ jobs:
       - run: echo << pipeline.project.git_url >>
       - run: echo "i'm a cron test"
 
-workflows: 
+workflows:  
   test-ruby:
     triggers:
       - schedule:
