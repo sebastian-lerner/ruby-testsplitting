@@ -8,7 +8,7 @@ jobs:
     steps:
       - run: echo "hello world"
       - run: echo $CIRCLE_REPOSITORY_URL
-      - run: echo << pipeline.project.git_url >>
+      - run: echo << pipeline.project.git_url >> 
 
 workflows: 
   test-ruby:
