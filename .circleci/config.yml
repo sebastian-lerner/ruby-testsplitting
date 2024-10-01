@@ -13,12 +13,5 @@ jobs:
 
 workflows:  
   test-ruby:
-    triggers:
-      - schedule:
-          cron: '40 * * * *'
-          filters:
-            branches:
-              only:
-                - main
     jobs:
       - test-cron
