@@ -1,4 +1,8 @@
 version: 2.1
+parameters:
+  test:
+    type: string
+    default: "Im a test"
 
 jobs:
   test-cron:
