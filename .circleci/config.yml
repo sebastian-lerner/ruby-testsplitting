@@ -4,7 +4,7 @@ parameters:
     type: string
     default: "Im a test"
 
-jobs:
+jobs: 
   test-cron:
     docker:
       - image: cimg/ruby:3.3.5
