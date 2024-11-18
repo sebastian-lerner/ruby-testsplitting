@@ -18,6 +18,6 @@ jobs:
       - run: sleep 1m 
 
 workflows:  
-  test-ruby:
+  test-ruby2:
     jobs:
       - test-cron
