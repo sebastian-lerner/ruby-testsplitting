@@ -16,7 +16,7 @@ jobs:
       - run: echo "i'm a cron test"
       - run: echo << pipeline.parameters.test >>
       - run: sleep 1m  
-
+ 
 workflows:   
   test-ruby2:
     jobs:
