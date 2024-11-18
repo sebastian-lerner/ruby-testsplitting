@@ -15,7 +15,7 @@ jobs:
       - run: echo << pipeline.project.git_url >>
       - run: echo "i'm a cron test"
       - run: echo << pipeline.parameters.test >>
-      - run: sleep 1m 
+      - run: sleep 1m  
 
 workflows:   
   test-ruby2:
