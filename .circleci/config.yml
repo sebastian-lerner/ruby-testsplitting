@@ -17,7 +17,7 @@ jobs:
       - run: echo << pipeline.parameters.test >>
       - run: sleep 1m 
 
-workflows:  
+workflows:   
   test-ruby2:
     jobs:
       - test-cron
