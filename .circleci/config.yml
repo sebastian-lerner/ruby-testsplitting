@@ -20,4 +20,4 @@ jobs:
 workflows:   
   test-ruby2:
     jobs:
-      - test-cron
+      - test-cron 
